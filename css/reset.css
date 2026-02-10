@@ -1,0 +1,58 @@
+html, body {
+  width: 100%;
+  min-height: 100vh;
+}
+
+html,
+body,
+h1, h2, h3, h4, h5, h6,
+p,
+ul, ol,
+form,
+figure,
+blockquote,
+dl, dd {
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  line-height: 1.5;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid highlight;
+  outline-offset: 2px;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}

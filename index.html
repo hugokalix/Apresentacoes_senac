@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Hospedagem Web
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <main class="slide-main">
+
+        <section class="slide active">
+
+            <div class="row align-center p-5">
+
+                <div class="col-md">
+
+                    <h1 class="mb-5">
+                        HOSPEDAGEM<br><span class="highlight-span">WEB</span>
+                    </h1>
+
+                    <div class="team-box mt-40">
+
+                        <p class="team-title">
+                            Integrantes da Equipe:
+                        </p>
+
+                        <ul class="team-list">
+                            <li>
+                                Hugo Victor
+                            </li>
+
+                            <li>
+                                João Victor
+                            </li>
+
+                            <li>
+                                Kaue de Jesus
+                            </li>
+
+                            <li>
+                                Rui Cesar
+                            </li>
+
+                            <li>
+                                Samuel Resende
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <img class="visual-image" src="images/analise.png" alt="Capa Análise Técnica">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="container">
+                <img class="full-slide-image" src="images/indroducao.png" alt="Os Players Analisados: Umbler, GoDaddy e HostGator">
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="row align-end p-5">
+
+                <div class="col-md">
+
+                    <h2>
+                        Hospedando Um
+                        <span class="highlight-span">
+                            WebSite
+                        </span>
+                    </h2>
+
+                    <p class="big-text mb-5">
+                        Por que uma hospedagem comum de R$ 10,00 não serve para um servidor Node.js?
+                    </p>
+
+                    <div>
+
+                        <p>
+                            Tendo em mente as tecnologias que devem ser utilizadas no decorrer do curso, a escolha de um local de hospedagem adequado se faz importante.
+                        </p>
+
+                        <p>
+                            Diferentemente do <strong>PHP</strong> — onde cada acesso cria um processo novo e depois se encerra, ou seja, a cada requerimento do utilizador, o script é executado —, um servidor <strong>Node.js</strong> é um <strong>processo contínuo</strong>: isso significa que ele é inicializado uma vez e continua rodando indefinidamente.
+                        </p>
+
+                        <p>
+                            Ele precisa ficar residente na memória RAM do servidor 24 horas por dia, ouvindo uma porta específica — <strong>listening</strong>. A maioria das hospedagens baratas é configurada para encerrar processos que ficam rodando por muito tempo para economizar recursos, o que derrubaria o sistema.
+                        </p>
+
+                    </div>
+                </div>
+
+                <div class="col-md">
+                    <img class="visual-image" src="images/nodejs.png" alt="Diagrama de Requisitos Node.js">
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="row align-center p-5">
+
+                <div class="col-md-12">
+
+                    <h2>
+                        Arquitetura de Servidores
+                    </h2>
+
+                    <p class="mb-5">
+                        Analisando o mercado, existem valores variados para hospedagem de websites — isso ocorre devido a arquitetura de cada servidor de hospedagem. Assim sendo, podemos encontrar valores mais baixos, como R$ 15,00, até mesmo valores acima de R$ 100,00
+                    </p>
+
+                </div>
+
+                <div class="col-md">
+
+                    <div class="row gap-5">
+
+                        <div class="block-item traditional"
+                             style="flex: 1; padding: 30px; background: rgba(255,255,255,0.03); border-radius: 15px; border-left: 5px solid #F8B333;">
+
+                            <h3>
+                                🏢 O "Prédio" (Shared Hosting)
+                            </h3>
+
+                            <p class="subtitle-caps">
+                                EX: HOSTGATOR / GODADDY BASIC
+                            </p>
+
+                            <p>
+                                Imagine morar em um prédio superlotado. Você tem seu apartamento, mas divide a caixa d'água (CPU) e a fiação elétrica (RAM) com 500 vizinhos.
+                            </p>
+
+                            <div>
+                                <p>
+                                    <strong>
+                                        <span class="bi bi-exclamation-triangle-fill me-1 text-warning"></span> O Efeito "Vizinho Barulhento"
+                                    </strong>: Se o site do vizinho viralizar ou sofrer um ataque DDoS, ele consome toda a CPU do servidor.
+                                </p>
+
+                                <p>
+                                    <strong>Resultado</strong>:
+                                </p>
+
+                                <p>
+                                    Seu site fica lento ou sai do ar, mesmo que você não tenha feito nada errado.
+                                </p>
+                            </div>
+
+                        </div>
+
+                        <div class="block-item modern"
+                            style="flex: 1; padding: 30px; background: rgba(255,255,255,0.03); border-radius: 15px; border-left: 5px solid #26C05E;">
+
+                            <h3>
+                                🏠 A "Casa Murada" (Containers & VPS)
+                            </h3>
+
+                            <p class="subtitle-caps">
+                                EX: UMBLER / GODADDY VPS
+                            </p>
+
+                            <p>
+                                Aqui, você aluga um terreno murado. Os recursos de memória e processamento que você contratou são <strong>reservados exclusivamente para você</strong>.
+                            </p>
+
+                            <p>
+                                O que acontece fora dos seus muros não te afeta. Se o servidor vizinho cair, sua aplicação continua rodando com 100% da performance. Isso garante a estabilidade necessária para o Node.js manter suas conexões ativas.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="row align-center p-5">
+
+                <div class="col-md">
+
+                    <h2 class="mb-4" style="color: #F8B333;">
+                        HOSTGATOR
+                    </h2>
+
+                    <div>
+
+                        <p>
+                            A HostGator domina o mercado de entrada no Brasil. Sua estratégia é clara: ganhar no volume.
+                            É a porta de entrada mais comum para quem está começando na web.
+                        </p>
+
+                        <p>
+                            Analisando tecnicamente, o foco deles é <strong>facilidade e retenção</strong>, não
+                            performance bruta. Eles oferecem o maior pacote de "brindes" do mercado para garantir que o
+                            cliente não saia.
+                        </p>
+
+                        <div class="pros-cons-grid">
+
+                            <h4 class="mb-3">
+                                Pontos em Destaque:
+                            </h4>
+
+                            <ul class="keypoints">
+                                <li>
+                                    ✅ <strong>E-Mail Grátis Ilimitado:</strong> Um diferencial enorme para empresas que
+                                    precisam de muitas contas (EX: @rh, @contato, @vendas).
+                                </li>
+
+                                <li>
+                                    ✅ <strong>Painel cPanel:</strong> O padrão da indústria, fácil de usar e com muita
+                                    documentação.
+                                </li>
+
+                                <li>
+                                    ✅ <strong>Suporte Local:</strong> Chat 24/7 em português e pagamento em boleto/pix
+                                    fácil.
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md">
+                    <div class="image-content">
+                        <img class="visual-image" src="images/analisehostgator.png" alt="Análise HostGator">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="row p-5">
+
+                <div class="col-12">
+                    <h2>
+                        Planos
+                    </h2>
+
+                    <p>
+                        Aqui identificamos a estratégia de <strong>Lock-in</strong> (Fidelidade Forçada). O preço atrativo de vitrine, com descontos elevados, possui um ponto importante a ser considerado.
+                    </p>
+
+                    <div class="plans-image-container">
+                        <img class="plans-screenshot hostgator-glow" src="images/hostgatorpreco.png" alt="Tabela de Preços HostGator">
+                    </div>
+
+                    <div class="content-box mt-30">
+                        <p>
+                            <span class="bi bi-pin-angle-fill me-1 text-danger"></span> <strong>Análise Financeira:</strong> O valor promocional só é válido se pagarmos o <strong>Ciclo Trienal (3 anos)</strong> adiantado. Se optarmos pelo pagamento mensal (para termos liberdade de cancelar caso o servidor não aguente), o valor mais que dobra, perdendo a competitividade de custo-benefício.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="row align-center p-5">
+
+                <div class="col">
+
+                    <h2 class="mb-4" style="color: #1AB7EA;">
+                        GODADDY
+                    </h2>
+
+                    <div>
+                        <p>
+                            A GoDaddy é a maior registradora de domínios do mundo. O foco deles é o varejo em massa e o empreendedor leigo. Diferente da HostGator, eles investem pesado em uma infraestrutura moderna (já utilizam discos NVMe por padrão), mas cobram caro por cada recurso adicional.
+                        </p>
+
+                        <div class="pros-cons-grid">
+
+                            <h4 class="mb-3">
+                                Pontos em Destaque:
+                            </h4>
+
+                            <ul class="keypoints">
+                                <li>
+                                    ✅ <strong>Suporte Telefônico:</strong> Um diferencial raro. Falar com um humano em
+                                    português em uma emergência é valioso.
+                                </li>
+
+                                <li>
+                                    ✅ <strong>Performance de Disco:</strong> O uso de NVMe garante leitura de arquivos
+                                    muito mais rápida que o SSD SATA comum.
+                                </li>
+
+                                <li>
+                                    ⚠️ <strong>Custo Oculto (Upsell):</strong> Diferente da concorrente, o e-mail
+                                    profissional (Outlook) é pago à parte após o primeiro ano, encarecendo o projeto a
+                                    longo prazo.
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md">
+                    <div class="image-content">
+                        <img class="visual-image" src="images/analisegodaddy.png" alt="Análise GoDaddy">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="row p-5">
+
+                <div class="col-12">
+                    <h2>
+                        Planos
+                    </h2>
+
+                    <p>
+                        Aqui temos um comparativo visual direto entre a hospedagem compartilhada e a hospedagem VPS. A GoDaddy mistura os dois no marketing, mas tecnicamente são mundos opostos.
+                    </p>
+
+                    <div class="plans-image-container">
+                        <img class="plans-screenshot godaddy-glow" src="images/precogodaddy.png" alt="Preços GoDaddy VPS vs Shared">
+                    </div>
+
+                    <div class="content-box mt-30">
+
+                        <p>
+                            <span class="bi bi-pin-angle-fill me-1 text-danger"></span> <strong>Recomenda-se a Hospedagem VPS</strong>: o plano <strong>VPS 1 vCPU</strong> — R$ 34,99 — oferece recursos dedicados. É a escolha técnica correta dentro da GoDaddy para garantir estabilidade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="row align-center p-5">
+
+                <div class="col">
+
+                    <h2 class="mb-4" style="color: #26C05E;">
+                        UMBLER
+                    </h2>
+
+                    <div>
+                        <p>
+                            A Umbler se posiciona como uma "Cloud Native". Eles não vendem hospedagem de site tradicional, eles vendem <strong>Containers</strong>. É uma PaaS (Platform as a Service) brasileira pensada exclusivamente para desenvolvedores e agências digitais.
+                        </p>
+
+                        <div class="pros-cons-grid">
+
+                            <h4 class="mb-3">
+                                Pontos em Destaque:
+                            </h4>
+
+                            <ul class="keypoints">
+                                <li>
+                                    ✅ <strong>Containers (Docker):</strong> Isolamento nativo. Cada site roda em seu próprio container, eliminando completamente o problema do "vizinho barulhento".
+                                </li>
+
+                                <li>
+                                    ✅ <strong>Deploy via Git:</strong> Integração contínua. Basta dar um <code>git push</code> e o servidor atualiza o código automaticamente.
+                                </li>
+
+                                <li>
+                                    ✅ <strong>Pay-per-Use:</strong> Sistema de créditos pré-pagos. Cobra por hora de uso, garantindo transparência total.
+                                </li>
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md">
+                    <div class="image-content">
+                        <img src="images/analiseumbler.png" alt="Análise Umbler" class="visual-image">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="row p-5">
+
+                <div class="col-12">
+                    <h2>
+                        Planos
+                    </h2>
+
+                    <p>
+                        A transparência é o forte aqui. Você não compra "Planos com nomes bonitos", você compra <strong>Hardware Líquido</strong> (RAM e vCPU).
+                    </p>
+
+                    <div class="plans-image-container">
+                        <img class="plans-screenshot umbler-glow" src="images/precosumbler.jpg" alt="Preços Umbler Container">
+                    </div>
+
+                    <div class="content-box mt-30">
+                        <p>
+                            <span class="bi bi-pin-angle-fill me-1 text-danger"></span> <strong>O Pulo do Gato</strong>: O plano <strong>Container P (R$ 34,00/mês)</strong> é o "sweet spot". Ele oferece 1GB de RAM 100% dedicada e 2 vCPUs. Diferente dos concorrentes, aqui nós temos garantia contratual de que essa memória é só nossa, vital para o Node.js não dar "Out of Memory".
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="container-fluid mb-3">
+                <h2>
+                    Comparativo
+                </h2>
+            </div>
+
+            <div class="container">
+
+                <table class="resource-table mt-40">
+                    <thead>
+                        <tr>
+                            <th>
+                                Recurso
+                            </th>
+                            <th style="color: #26C05E;">
+                                UMBLER
+                            </th>
+                            <th style="color: #1AB7EA;">
+                                GODADDY
+                            </th>
+                            <th style="color: #F8B333;">
+                                HOSTGATOR
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="feature-name">
+                                🔐 Certificado SSL
+                            </td>
+                            <td>
+                                ✅ Grátis (Automático)
+                            </td>
+                            <td>
+                                ⚠️ Grátis (Só 1º ano)
+                            </td>
+                            <td>
+                                ✅ Grátis (Vitalício)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                🌐 Domínio
+                            </td>
+                            <td>
+                                ❌ Pago à parte
+                            </td>
+                            <td>
+                                ✅ Grátis (1º ano)
+                            </td>
+                            <td>
+                                ✅ Grátis (1º ano)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                📧 E-Mail Profissional
+                            </td>
+                            <td>
+                                ⚠️ R$ 5,00 / Conta
+                            </td>
+                            <td>
+                                ⚠️ R$ 29,90 / Conta
+                            </td>
+                            <td>
+                                ✅ <strong>Grátis Ilimitado</strong>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="feature-name">
+                                🎛️ Painel de Controle
+                            </td>
+                            <td>
+                                Próprio (Foco Dev)
+                            </td>
+                            <td>
+                                cPanel (Foco Leigo)
+                            </td>
+                            <td>
+                                cPanel (Foco Leigo)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </div>
+
+        </section>
+    
+        <section class="slide">
+
+            <div class="row align-center p-5">
+
+                <div class="col-12 mb-5">
+
+                    <h2>
+                        Cenário Alternativo: 
+                        <span class="highlight-span">
+                            Python & IA
+                        </span>
+                    </h2>
+
+                    <p>
+                        Demonstrando maturidade arquitetural: Se o projeto migrasse de Node.js para Python (para usar bibliotecas de IA como LangChain), qual framework escolheríamos?
+                    </p>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md mb-3">
+                        <div class="detailed-box h-100" style="border-top: 5px solid #fff;">
+                            <h3>
+                                🌶️ FLASK
+                            </h3>
+
+                            <p class="subtitle-caps">
+                                O MINIMALISTA
+                            </p>
+
+                            <ul class="keypoints">
+                                <li>
+                                    ✅ Ótimo para scripts simples e protótipos rápidos.
+                                </li>
+
+                                <li>
+                                    ❌ <strong>Síncrono (Bloqueante):</strong> Péssimo para chats em tempo real ou muitas requisições simultâneas.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md mb-3">
+                        <div class="detailed-box h-100" style="border-top: 5px solid #092E20;">
+                            <h3>
+                                🛡️ DJANGO
+                            </h3>
+
+                            <p class="subtitle-caps">
+                                O "TANQUE DE GUERRA"
+                            </p>
+
+                            <ul class="keypoints">
+                                <li>
+                                    ✅ "Baterias inclusas": Admin, Autenticação e ORM prontos.
+                                </li>
+
+                                <li>
+                                    ❌ Muito pesado e monolítico para arquitetura de microserviços.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md mb-3">
+                        <div class="detailed-box h-100" style="background: linear-gradient(180deg, rgba(5,153,139,0.1) 0%, transparent 100%); border: 2px solid #05998B;">
+                            <h3>
+                                ⚡ FASTAPI
+                            </h3>
+
+                            <p class="subtitle-caps">
+                                A ESCOLHA MODERNA
+                            </p>
+
+                            <ul class="keypoints">
+                                <li>
+                                    ✅ <strong>Assíncrono (AsyncIO):</strong> Performance rivaliza com Node.js e Go.
+                                </li>
+
+                                <li>
+                                    ✅ Documentação automática (Swagger UI).
+                                </li>
+
+                                <li>
+                                    🏆 <strong>Veredito:</strong> Seria a escolha técnica indiscutível.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    
+        <section class="slide">
+
+            <div class="container-fluid mb-3">
+                <h2>
+                    A Escolha Final
+                </h2>
+            </div>
+
+            <div class="container">
+                <table class="final-table">
+                    <thead>
+                        <tr>
+                            <th>
+                                Critério Chave
+                            </th>
+                            <th class="umbler-col">
+                                UMBLER (Container)
+                            </th>
+                            <th class="godaddy-col">
+                                GODADDY (VPS)
+                            </th>
+                            <th class="hostgator-col">
+                                HOSTGATOR (Shared)
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                Performance Node.js
+                            </td>
+                            <td>
+                                ⭐⭐⭐⭐⭐ (Estável)
+                            </td>
+                            <td>
+                                ⭐⭐⭐⭐ (Dedicada)
+                            </td>
+                            <td>
+                                ⭐⭐ (Risco Alto)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Facilidade de Deploy
+                            </td>
+                            <td>
+                                ⭐⭐⭐⭐⭐ (Git Push)
+                            </td>
+                            <td>
+                                ⭐⭐⭐ (Manual SSH)
+                            </td>
+                            <td>
+                                ⭐⭐ (FTP/Painel)
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Controle (Root)
+                            </td>
+                            <td>
+                                Sim (Docker)
+                            </td>
+                            <td>
+                                Sim (Total)
+                            </td>
+                            <td>
+                                Não
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Previsibilidade de Custo
+                            </td>
+                            <td>
+                                Alta (Sem renovação surpresa)
+                            </td>
+                            <td>
+                                Média
+                            </td>
+                            <td>
+                                Baixa (Renovação cara)
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="row align-center p-5">
+
+                <h2>
+                    A Voz do 
+                    <span class="highlight-span">
+                        Cliente
+                    </span>
+                </h2>
+
+                <p>
+                    Algumas reviews retiradas do <strong>Reclame Aqui</strong> e de fóruns técnicos.
+                </p>
+                
+                <div class="grid-3-col mt-40" style="align-items: flex-start;">
+                    
+                    <div class="review-column">
+                        <div class="review-header" style="border-bottom: 3px solid #F8B333;">
+                            <h3 style="color: #F8B333;">HostGator</h3>
+                        </div>
+                        
+                        <div class="review-card positive">
+                            <img src="images/avatar-03.png" alt="Foto Cliente" class="review-avatar">
+                            <div class="review-content">
+                                <p class="review-text">"O chat de suporte me salvou de madrugada. Atendente muito paciente e resolveu o problema na hora."</p>
+                                <span class="review-author">⭐⭐⭐⭐⭐ Marina L. (Blogueira)</span>
+                            </div>
+                        </div>
+                        <div class="review-card positive">
+                            <img src="images/avatar-02.png" alt="Foto Cliente" class="review-avatar">
+                            <div class="review-content">
+                                <p class="review-text">"Melhor custo para quem está começando. O e-mail ilimitado ajuda muito minha pequena empresa."</p>
+                                <span class="review-author">⭐⭐⭐⭐⭐ Carlos E. (Loja Virtual)</span>
+                            </div>
+                        </div>
+
+                        <div class="review-card negative">
+                            <div class="negative-icon">😡</div>
+                            <div class="review-content">
+                                <p class="review-text">"Meu site fica lento toda vez que tem promoção. O servidor compartilhado não aguenta picos."</p>
+                                <span class="review-author">Reclame Aqui</span>
+                            </div>
+                        </div>
+                        <div class="review-card negative">
+                            <div class="negative-icon">💸</div>
+                            <div class="review-content">
+                                <p class="review-text">"Tentei cancelar a renovação automática e foi um pesadelo. Cobraram no cartão mesmo após o cancelamento."</p>
+                                <span class="review-author">Reclame Aqui</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-column">
+                        <div class="review-header" style="border-bottom: 3px solid #26C05E;">
+                            <h3 style="color: #26C05E;">Umbler</h3>
+                        </div>
+                        
+                        <div class="review-card positive">
+                            <img src="images/avatar-04.png" alt="Foto Cliente" class="review-avatar">
+                            <div class="review-content">
+                                <p class="review-text">"O deploy via Git é mágica. Subo o código e o site atualiza sozinho em segundos. Incrível para quem coda."</p>
+                                <span class="review-author">⭐⭐⭐⭐⭐ Pedro S. (Dev FullStack)</span>
+                            </div>
+                        </div>
+                        <div class="review-card positive">
+                            <img src="images/avatar-01.png" alt="Foto Cliente" class="review-avatar">
+                            <div class="review-content">
+                                <p class="review-text">"Transparência total. Só pago quando o site está no ar. Adeus mensalidade fixa que cobra até desligado."</p>
+                                <span class="review-author">⭐⭐⭐⭐⭐ Ana P. (Agência Digital)</span>
+                            </div>
+                        </div>
+
+                        <div class="review-card negative">
+                            <div class="negative-icon">📞</div>
+                            <div class="review-content">
+                                <p class="review-text">"Falta suporte por telefone. Tive uma urgência crítica e precisei esperar na fila do chat online."</p>
+                                <span class="review-author">Fórum Dev</span>
+                            </div>
+                        </div>
+                        <div class="review-card negative">
+                            <div class="negative-icon">💲</div>
+                            <div class="review-content">
+                                <p class="review-text">"O custo do Banco de Dados separado pegou de surpresa. O projeto ficou mais caro que o previsto no final."</p>
+                                <span class="review-author">Comunidade Discord</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="review-column">
+                        <div class="review-header" style="border-bottom: 3px solid #1AB7EA;">
+                            <h3 style="color: #1AB7EA;">GoDaddy</h3>
+                        </div>
+                        
+                        <div class="review-card positive">
+                            <img src="images/avatar-06.png" alt="Foto Cliente" class="review-avatar">
+                            <div class="review-content">
+                                <p class="review-text">"O suporte por telefone no Brasil funciona mesmo. Resolveram meu problema de DNS na hora, sem robôs."</p>
+                                <span class="review-author">⭐⭐⭐⭐⭐ Juliana M. (Empresária)</span>
+                            </div>
+                        </div>
+                        <div class="review-card positive">
+                            <img src="images/avatar-05.png" alt="Foto Cliente" class="review-avatar">
+                            <div class="review-content">
+                                <p class="review-text">"Painel muito intuitivo para quem não entende de TI. Comprei o domínio e configurei o site sozinho."</p>
+                                <span class="review-author">⭐⭐⭐⭐⭐ Ricardo F. (Empreendedor)</span>
+                            </div>
+                        </div>
+
+                        <div class="review-card negative">
+                            <div class="negative-icon">📈</div>
+                            <div class="review-content">
+                                <p class="review-text">"A renovação veio 3x mais cara! Um absurdo o aumento de preço no segundo ano sem aviso prévio."</p>
+                                <span class="review-author">Reclame Aqui</span>
+                            </div>
+                        </div>
+                        <div class="review-card negative">
+                            <div class="negative-icon">📧</div>
+                            <div class="review-content">
+                                <p class="review-text">"Cobrança abusiva de e-mail profissional. Tudo o que é grátis nos outros, aqui é pago à parte."</p>
+                                <span class="review-author">Reclame Aqui</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+    
+        <section class="slide">
+
+            <div class="row flex-column align-center p-5">
+
+                <div class="container">
+
+                    <div class="col-md">
+                        <h1 class="text-center" style="font-size: 5rem">
+                            NOSSAS ESCOLHAS
+                        </h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md">
+                            <img src="images/hostgator-logo.png" alt="HostGator Logo">
+                        </div>
+
+                        <div class="col-md">
+                            <img src="images/umbler-logo.png" alt="Umbler Logo">
+                        </div>
+
+                        <div class="col-md">
+                            <img src="images/godaddy-logo.png" alt="GoDaddy Logo">
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="slide">
+
+            <div class="container"
+                 style="display: flex; flex-direction: column; align-items: center;">
+
+                <h1 style="font-size: 6rem; margin-bottom: 20px;">
+                    OBRIGADO!
+                </h1>
+
+                <p style="text-align: center; font-size: 2rem;">
+                    Perguntas?
+                </p>
+
+                <div style="margin-top: 80px; padding: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
+
+                    <p style="text-align: center; font-size: 1.2rem; opacity: 0.8;">
+                        Hospedagem Web
+                    </p>
+                        
+                    <p style="font-size: 1rem; opacity: 0.6;">
+                        Hugo Victor • João Victor • Kaue de Jesus • Rui Cesar • Samuel Resende
+                    </p>
+
+                </div>
+            </div>
+
+        </section>
+
+        <div class="nav-controls">
+
+            <div class="d-flex flex-wrap gap-3">
+                <button id="prev-btn">
+                    ❮ Anterior
+                </button>
+
+                <button id="next-btn">
+                    Próximo ❯
+                </button>
+            </div>
+
+            <div>
+                <span id="slide-counter">
+                    1 / 15
+                </span>
+            </div>
+            
+        </div>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js" integrity="sha512-nKXmKvJyiGQy343jatQlzDprflyB5c+tKCzGP3Uq67v+lmzfnZUi/ZT+fc6ITZfSC5HhaBKUIvr/nTLCV+7F+Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
+        
+    </script>
+
+    <script src="js/scripts.js">
+
+    </script>
+
+</body>
+</html>
