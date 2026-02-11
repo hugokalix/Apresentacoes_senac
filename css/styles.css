@@ -21,7 +21,6 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow: hidden;
 }
 
 h1 {
@@ -53,10 +52,22 @@ p {
     font-size: 1rem;
 }
 
-/* Utilidades */
+/* Utilities */
+
+.justify-start {
+    justify-content: flex-start;
+}
 
 .justify-center {
     justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.align-start {
+    justify-content: flex-start;
 }
 
 .align-center {
@@ -69,12 +80,6 @@ p {
 
 /* Slide Classes */
 
-.full-slide-image {
-    object-fit: contain;
-    border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .keypoints {
     color: #ccc;
     font-size: 1rem;
@@ -84,18 +89,33 @@ p {
     padding-bottom: 0.75rem;
 }
 
+.slide-spacing {
+    padding: 3rem;
+}
+
+.slide-title-1 {
+    font-weight: 900;
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+/* Slide Main */
+
 .slide-main {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
 }
 
 .slide {
     position: absolute;
     display: flex;
+    top: 0;
+    left: 0;
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     opacity: 0;
     visibility: hidden;
     transform: scale(0.98) translateY(20px);
@@ -111,6 +131,14 @@ p {
     transform: scale(1) translateY(0);
     z-index: 10;
 }
+
+
+/* Slide Footer */
+
+.slide-footer {
+    display: none;
+}
+
 
 .subtitle-caps {
     font-size: 1rem;
@@ -141,16 +169,6 @@ p {
     opacity: 0.8;
 }
 
-/* =========================================
-   5. LAYOUTS: SPLIT & GRID
-   ========================================= */
-.split-layout {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
-
 .text-content {
     flex: 1;
     display: flex;
@@ -178,27 +196,6 @@ p {
     gap: 40px;
     width: 100%;
 }
-
-/* Utilitários de Margem */
-/* .mt-20 {
-    margin-top: 20px;
-}
-
-.mt-30 {
-    margin-top: 30px;
-}
-
-.mt-40 {
-    margin-top: 40px;
-}
-
-.mb-30 {
-    margin-bottom: 30px;
-}
-
-.mb-40 {
-    margin-bottom: 40px;
-} */
 
 .content-box,
 .detailed-box,
@@ -266,19 +263,15 @@ p {
     padding-bottom: 0.5rem;
 }
 
-/* =========================================
-   7. IMAGENS E PRINTS
-   ========================================= */
-/* Imagens Geradas (Contexto) */
-.visual-image {
-    width: 100%;
+.slide-image {
+    max-width: 100%;
+    height: auto;
     object-fit: contain;
     border-radius: 1rem;
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
     border: 1px solid var(--glass-border);
 }
 
-/* Prints de Telas (Preços) */
 .plans-image-container {
     width: 100%;
     display: flex;
@@ -290,17 +283,14 @@ p {
 .plans-screenshot {
     max-width: 100%;
     max-height: 60vh;
-    /* Altura controlada para sobrar espaço pro texto */
     border-radius: 12px;
     transition: transform 0.4s ease;
 }
 
 .plans-screenshot:hover {
     transform: scale(1.03);
-    /* Zoom suave */
 }
 
-/* Glows Específicos para cada Marca */
 .hostgator-glow {
     box-shadow: 0 0 50px rgba(248, 179, 51, 0.25);
     border: 2px solid rgba(248, 179, 51, 0.5);
@@ -372,13 +362,12 @@ p {
    ========================================= */
 .nav-controls {
     position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    width: auto;
-    background: rgba(0, 0, 0, 0.9);
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
     padding: 10px 20px;
-    border-radius: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px 50px 0 0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
     display: none;
     z-index: 1000;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
@@ -388,7 +377,7 @@ p {
     background: transparent;
     border: 1px solid #fff;
     color: #fff;
-    padding: 8px 20px;
+    padding: 0.5rem 1.25rem;
     border-radius: 20px;
     cursor: pointer;
     font-weight: 700;
@@ -503,16 +492,6 @@ p {
     text-align: right;
 }
 
-/* =========================================
-   13. ESTILOS DA MATRIZ SWOT
-   ========================================= */
-.swot-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    width: 100%;
-}
-
 .swot-card {
     background: rgba(255, 255, 255, 0.03);
     border-radius: 15px;
@@ -591,30 +570,7 @@ p {
 
 /* Responsividade */
 
-@media (max-width: 768px) {
-
-    .swot-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .nav-controls {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1rem;
-        bottom: 1rem;
-        right: 1rem;
-        padding: 1rem;
-    }
-
-}
-
 @media (max-width: 1024px) {
-
-    body {
-        font-size: 1rem;
-    }
 
     h1 {
         font-size: 3rem;
@@ -624,18 +580,63 @@ p {
         font-size: 2.2rem;
     }
 
-    .slide {
-        display: flex;
-    }
-
-    .split-layout {
-        flex-direction: column;
-        display: block;
-    }
-
     .grid-3-col,
     .grid-2-col {
         grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    body {
+        margin-bottom: 5rem;
+    }
+
+    .slide {
+        flex-direction: row;
+    }
+
+    .slide-title-1 {
+        font-size: 4rem;
+    }
+
+    .slide-footer {
+        display: block;
+    }
+
+    .slide-spacing {
+        padding: 1rem;
+    }
+
+    .nav-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+}
+
+@media (max-width: 416px) {
+
+    .nav-controls {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .slide-title-1 {
+        font-size: 3rem;
+    }
+
+    body {
+        margin-bottom: 10rem;
+    }
+
+    h1 {
+        font-size: 2.25rem;
     }
 
 }
